@@ -17,9 +17,9 @@
 
 - Go to [Open AI Platform](https://platform.openai.com) and create an account if you do not have one already.
 
-- Navigate to `API keys` section to generate a new secret key.
+- Navigate to [API keys](https://platform.openai.com/api-keys) section to generate a new secret key.
 
 ## Configure the project to use openai API key
 
 - Create a .env.local file in the project root folder (where `package.json` is located) and enter the following configuration:
-  `OPEN_AI_API_KEY="YOUR API KEY"
+  `OPEN_AI_API_KEY="YOUR API KEY"`
