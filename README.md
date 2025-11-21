@@ -1,3 +1,5 @@
+
+
 # AI SDK Next js project
 
 ## Initializing a Project
@@ -86,4 +88,22 @@ This is the practice of crafting instructions to get better and appropriate resp
 
 It is about nudging AI model and guiding it to produce responses that fit application perfectly.
 
-One of the fundamental prompt engg technique is to use system prompts. System prompts are special instructions that personify the behavior of AI through out entire conversation. 
+One of the fundamental prompt engg technique is to use system prompts. System prompts are special instructions that personify the behavior of AI through out entire conversation.
+
+Telling what to do to AI is sometimes not enough. You need to show it how to do. This is called `Few-shot Learning`. e.g. You pre-populate the model with system prompt message and an example of user message and assistant message. You do this in order to nude the model to respond in the defined format.
+
+Some of the best practices for prompt engineering are:
+1 Start simple and iterate.
+2 Be specific but not overly restrictive
+3 Consider your audience
+4 Monitor costs
+5 Test edge cases (handle cases when users ask off topic questions.)
+6 Document what works (If you find good prompts, document those so that you can reuse those)
+
+
+## The order of the projects
+
+1 completion
+2 stream
+3 chat ( Check video 8-Prompt engineering for variations such as system prompt and few shot learning)
+4 structured-data
