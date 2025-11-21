@@ -10,7 +10,6 @@ export const POST = async (req: Request) => {
       model: openai("gpt-4.1-nano"),
       prompt: prompt
     })
-
     return Response.json(result.text);
 
   } catch (e) {
