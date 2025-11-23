@@ -1,5 +1,3 @@
-
-
 # AI SDK Next js project
 
 ## Initializing a Project
@@ -25,7 +23,9 @@
 
 - Create a .env.local file in the project root folder (where `package.json` is located) and enter the following configuration:
   `OPEN_AI_API_KEY="YOUR API KEY"`
+
 ---
+
 ## AI Models and Providers
 
 > What exactly is a model?
@@ -34,10 +34,10 @@
 
 The different types of models are
 
-- *Text generation models*:  Process and generate human like text ( can do analysis of text, write text and have conversations in natural language). These are also called LLMs. Because they are trained on massive amounts of date, they are large. The examples are GPT-4 from OpenAI, Claude from Anthropic and Gemini from google.
-- *Embedding models*: These convert text to numbers called vectors that capture the meaning of the text. If you can turn the meaning of a sentence into coordinates on a map, similar meanings would be close together on that map. Though they are not used directly, they are the brains behind content recommendations.
-- *Image models*:  They either analyze existing images or generate images from text descriptions. e.g. Midjourney, Dall-E and Flux.
-- *Multi-modal models*: Swiss Army knives of the AI world. These can handle multiple types of inputs and outputs. They are expensive. e.g. GPT-4, Claude 4 and Gemini.
+- _Text generation models_: Process and generate human like text ( can do analysis of text, write text and have conversations in natural language). These are also called LLMs. Because they are trained on massive amounts of date, they are large. The examples are GPT-4 from OpenAI, Claude from Anthropic and Gemini from google.
+- _Embedding models_: These convert text to numbers called vectors that capture the meaning of the text. If you can turn the meaning of a sentence into coordinates on a map, similar meanings would be close together on that map. Though they are not used directly, they are the brains behind content recommendations.
+- _Image models_: They either analyze existing images or generate images from text descriptions. e.g. Midjourney, Dall-E and Flux.
+- _Multi-modal models_: Swiss Army knives of the AI world. These can handle multiple types of inputs and outputs. They are expensive. e.g. GPT-4, Claude 4 and Gemini.
 
 ## Model Characteristics
 
@@ -78,7 +78,7 @@ The context window is measured in tokens.
 
 Input tokens are everything you send to the model.
 
-Output tokens are everything the model generates in response. 
+Output tokens are everything the model generates in response.
 
 Different models have different limits for Input and output tokens. Input and output tokens have different pricing. Understanding this helps optimize API costs.
 
@@ -100,10 +100,12 @@ Some of the best practices for prompt engineering are:
 5 Test edge cases (handle cases when users ask off topic questions.)
 6 Document what works (If you find good prompts, document those so that you can reuse those)
 
-
 ## The order of the projects
 
 1 completion
 2 stream
 3 chat ( Check video 8-Prompt engineering for variations such as system prompt and few shot learning)
 4 structured-data
+5 structured-array
+6 structured-enum. (enums are available only with `generateObject`)
+7 tools
