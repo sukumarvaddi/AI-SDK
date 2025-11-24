@@ -19,24 +19,7 @@ const tools = {
       };
       return weatherData[location] || "Weather data not available for this location.";
     }
-  }),
-
-  getLocation: tool({
-    name: "Location tool",
-    description: "Provides location information for a given users.",
-    inputSchema: z.object({
-      name: z.string().describe("The name of the user to get the location for, e.g., 'Bruce Wayne'"),
-    }),
-    execute: async ({ name }) => {
-      const userToLocation: Record<string, string> = {
-        "Steve": "New York City",
-        "jobs": "San Francisco",
-        "mark": "London"
-      };
-      return userToLocation[name] || "Location data not available for this user.";
-    },
-  }),
-
+  })
 }
 
 export type ChatTools = InferUITools<typeof tools>;
@@ -49,9 +32,10 @@ export async function POST(request: Request) {
   const result = streamText({
     model: openai("gpt-4.1-nano"),
     tools: tools,
-    system: "You are an AI assistant that can use multiple tools to provide information about weather and user locations. Use the tools as needed to answer the user's questions accurately.",
     messages: convertToModelMessages(messages),
-    stopWhen: stepCountIs(3),
+
+    // Involves two steps: (1) calling weather tool , (2) processing its result
+    stopWhen: stepCountIs(2),
   })
 
   result.usage.then((usage) => {
