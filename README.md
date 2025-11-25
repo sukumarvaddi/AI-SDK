@@ -100,6 +100,16 @@ Some of the best practices for prompt engineering are:
 5 Test edge cases (handle cases when users ask off topic questions.)
 6 Document what works (If you find good prompts, document those so that you can reuse those)
 
+## Tool Orchestration
+
+The powerful thing about multi step tool calling is that we do not explicitly program the sequences.
+We just define the tools and capabilities.
+The AI figures out:
+1 Which tools to call
+2 What order to call them
+3 How to pass data between tools
+4 How to combine the results
+
 ## The order of the projects
 
 1 completion
@@ -109,3 +119,5 @@ Some of the best practices for prompt engineering are:
 5 structured-array
 6 structured-enum. (enums are available only with `generateObject`)
 7 tools
+8 Multi step tools
+9 web search tools
